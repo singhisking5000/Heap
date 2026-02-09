@@ -1,6 +1,7 @@
 
 public class Heap {
 
+    private int endIndex;
     //the actual storage structure for your heap
 
     private int[] arr;
@@ -17,7 +18,8 @@ public class Heap {
 
     public Heap() {
 
-    arr = new int[100];
+        arr = new int[100];
+        endIndex = 0;
 
     }
 
@@ -32,9 +34,9 @@ public class Heap {
     // 5 points
 
     public void add(int toAdd) {
-
-    
-
+        arr[endIndex] = toAdd;
+        siftUp(endIndex);
+        endIndex++;
     }
 
     
@@ -51,7 +53,23 @@ public class Heap {
 
     //3 points
 
-    private void siftUp(int index) {}
+    /*  arr[(i-1)/2]   <--- parent
+        arr[(2*i) + 1] <--- left
+        arr[(2*i) + 2] <--- right
+     */
+    private void siftUp(int i) {
+        if(i >= 0) {
+            if (i % 2 == 0) { // A left child 
+                if (arr[i] > arr[i - 1]) {
+                    int temp = arr[i - 1];
+                    arr[i - 1] = 
+                }
+            } else {
+
+            }
+            
+        }
+    }
 
     
 
